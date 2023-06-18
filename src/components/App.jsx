@@ -1,29 +1,26 @@
-import { Container, Title, ContactListTitle } from './App/App.styled';
-import Form from './Form/Form';
-import ContactsList from './Contact__List/Contact__List';
-import Filter from './Filter/Filter';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { SetError } from './Error/Error';
-import Spiner from './Spinner/Spinner';
+import { Container } from './App/App.styled';
 
-const App = () => {
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Layout/Layout';
+import Homepage from 'pages/HomePage/Homepage';
+import RegisterForm from 'pages/Register/Register';
+import LogInPage from 'pages/Login/LogIn';
+import ContactsPage from 'pages/ContactsPage/Contacts';
+
+const App = () => { 
 
   return (
     <Container>
-      <Title>My Phonebook</Title>
-      <Form />
-      <ContactListTitle> My contacts list</ContactListTitle>
-      <Filter />
-      <ContactsList />
-      <SetError />
-      <Spiner />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Homepage />} />
+          <Route path="register" element={<RegisterForm />} />
+          <Route path="login" element={<LogInPage />} />
+          <Route path='contacts' element={<ContactsPage />} />
+        </Route>
+      </Routes>
     </Container>
   );
 };
