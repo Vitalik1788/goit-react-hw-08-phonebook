@@ -12,13 +12,13 @@ const ContactsList = () => {
   return (
     <ul>
       {userFilteredContacts && !error &&
-        userFilteredContacts.map(({ id, name, phone }) => {
+        userFilteredContacts.map(({ id, name, number }) => {
           return (
             <ContactItem key={id}>
               <BsFillBookmarkCheckFill
                 style={{ color: 'blue', marginRight: '15px' }}
               />
-              {name}: {phone}
+              {name}: {number}
               <DeleteBtn
                 type="button"
                 onClick={() => dispatch(deleteContact(id))}
