@@ -1,14 +1,9 @@
-import { useSelector } from "react-redux"
-import { selectError } from "redux/selectors"
+import { useSelector } from 'react-redux';
+import { selectError } from 'redux/contacts/selectors';
 
-
-export const SetError = () => {  
+export const SetError = () => {
   const error = useSelector(selectError);
   return (
-    <div>
-      {error && <h2>Ooops, something wrong: {error} :( Try again!</h2>}
-    </div>
-  )
-
-
-}
+    <div>{error && <h2>Ooops, something wrong: {error} :( Try again!</h2>}</div>
+  );
+};

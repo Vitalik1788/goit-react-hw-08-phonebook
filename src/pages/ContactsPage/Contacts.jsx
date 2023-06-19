@@ -5,7 +5,7 @@ import Filter from 'components/Filter/Filter';
 import Form from 'components/Form/Form';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/operations';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const ContactsPage = () => {
         <ContactListTitle> My contacts list</ContactListTitle>
         <Filter />
         <ContactsList />
-        <SetError />        
+        <SetError />
       </Container>
     </>
   );

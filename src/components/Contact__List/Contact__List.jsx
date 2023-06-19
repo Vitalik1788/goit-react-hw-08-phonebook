@@ -1,8 +1,8 @@
 import { ContactItem, DeleteBtn } from './Contact__List.styled';
 import { BsFillBookmarkCheckFill } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/operations';
-import { selectError, selectVisibleContacts } from 'redux/selectors';
+import { deleteContact } from 'redux/contacts/operations';
+import { selectError, selectVisibleContacts } from 'redux/contacts/selectors';
 
 const ContactsList = () => {
   const dispatch = useDispatch(); 

@@ -1,7 +1,7 @@
 import { FilterLabel, FilterInput } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFilter } from 'redux/selectors';
-import { changeFilter } from '../../redux/filterReducer';
+import { selectFilter } from 'redux/contacts/selectors';
+import { changeFilter } from '../../redux/contacts/filterReducer';
 
 const Filter = () => {
   const value = useSelector(selectFilter);
@@ -15,7 +15,7 @@ const Filter = () => {
         type="text"
         value={value}
         onChange={e => dispatch(changeFilter(e.currentTarget.value))}
-        placeholder='Enter name to find'
+        placeholder="Enter name to find"
       />
     </FilterLabel>
   );
