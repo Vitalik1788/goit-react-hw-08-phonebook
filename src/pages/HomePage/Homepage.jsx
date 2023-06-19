@@ -4,7 +4,7 @@ const Homepage = () => {
   return (
     <>
       <HomeTitle>
-        Welcome on Phonebook homepage <br />
+        Welcome on Phonebook homepage! <br />
         Please Register or Log in
       </HomeTitle>
     </>
