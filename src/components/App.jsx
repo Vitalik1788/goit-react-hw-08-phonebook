@@ -12,7 +12,6 @@ import { userRefresh } from 'redux/auth/auth-operation';
 import { useAuth } from 'hooks/useAuth';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
-import Paper from '@mui/material/Paper';
 
 const App = () => {
   const dispatch = useDispatch();
