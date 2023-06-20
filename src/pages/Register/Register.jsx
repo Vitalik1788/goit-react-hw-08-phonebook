@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { FormLabel, RegForm } from './Register.styled';
+import { FormLabel, RegForm, RegisterButton, RegisterInput } from './Register.styled';
 import { register } from 'redux/auth/auth-operation';
 
 const RegisterForm = () => {
@@ -25,22 +25,35 @@ const RegisterForm = () => {
     <>
       <RegForm onSubmit={handleSubmit} autoComplete="off">
         <FormLabel>
-          Name
-          <input type="text" name="name" placeholder="Enter your name" />
+          <RegisterInput
+            label="Name"
+            variant="outlined"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+          />
         </FormLabel>
         <FormLabel>
-          Email
-          <input type="email" name="email" placeholder="Enter your email" />
+          <RegisterInput
+            label="Email"
+            variant="outlined"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+          />
         </FormLabel>
         <FormLabel>
-          Password
-          <input
+          <RegisterInput
+            label="Password"
+            variant="outlined"
             type="password"
             name="password"
             placeholder="Enter your password"
           />
         </FormLabel>
-        <button type="submit">Create your new Phonebook</button>
+        <RegisterButton variant="contained" type="submit">
+          Create account
+        </RegisterButton>
       </RegForm>
     </>
   );

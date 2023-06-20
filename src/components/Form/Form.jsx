@@ -44,11 +44,11 @@ const Form = () => {
 
   return (
     <FormContainer autoComplete="off" onSubmit={onSubmitForm}>
-      <NameFormLabel htmlFor="name"> Name </NameFormLabel>
+      <NameFormLabel htmlFor="name" />  
       <FormNameInput
         label="Name"
         variant="outlined"
-        size="small"
+        size="large"
         id="name"
         type="text"
         name="name"
@@ -59,11 +59,11 @@ const Form = () => {
         placeholder="Enter name"
         onChange={e => setName(e.currentTarget.value)}
       />
-      <NumberFormLabel htmlFor="number">Phone number</NumberFormLabel>
+      <NumberFormLabel htmlFor="number" />
       <FormNumberInput
-        label="Number"
+        label="Phone number"
         variant="outlined"
-        size="small"
+        size="large"
         id="number"
         type="tel"
         name="number"
