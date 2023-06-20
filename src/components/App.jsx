@@ -12,6 +12,7 @@ import { userRefresh } from 'redux/auth/auth-operation';
 import { useAuth } from 'hooks/useAuth';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+import Paper from '@mui/material/Paper';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -24,24 +25,35 @@ const App = () => {
   return (
     !isRefreshing && (
       <Container>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Homepage />} />
-            <Route
-              path="register"
-              element={
-                <RestrictedRoute component={RegisterForm} redirectTo="/contacts" />
-              }
-            />
-            <Route
-              path="login"
-              element={
-                <RestrictedRoute component={LogInPage} redirectTo="/contacts" />
-              }
-            />
-            <Route path="contacts" element={<PrivateRoute component={ContactsPage} redirectTo='/login' />} />
-          </Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Homepage />} />
+              <Route
+                path="register"
+                element={
+                  <RestrictedRoute
+                    component={RegisterForm}
+                    redirectTo="/contacts"
+                  />
+                }
+              />
+              <Route
+                path="login"
+                element={
+                  <RestrictedRoute
+                    component={LogInPage}
+                    redirectTo="/contacts"
+                  />
+                }
+              />
+              <Route
+                path="contacts"
+                element={
+                  <PrivateRoute component={ContactsPage} redirectTo="/login" />
+                }
+              />
+            </Route>
+          </Routes>
       </Container>
     )
   );

@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
 
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
+const MatButton = Button;
+const MatInput = TextField;
+
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
@@ -11,10 +17,9 @@ export const NameFormLabel = styled.label`
   font-weight: 700;
 `
 
-export const FormNameInput = styled.input`
+export const FormNameInput = styled(MatInput)`
   display: block;
-  padding-left: 10px;
-  max-width: 300px;
+  width: 500px;
   margin-bottom: 15px;
   font-size: 18px;
   border-radius: 15px;
@@ -26,9 +31,8 @@ export const NumberFormLabel =  styled.label`
   font-size: 24px;
   font-weight: 700;
 `
-export const FormNumberInput = styled.input`
+export const FormNumberInput = styled(MatInput)`
   display: block;
-  padding-left: 10px;
   max-width: 300px;
   margin-bottom: 15px;
   font-size: 18px;
@@ -36,13 +40,13 @@ export const FormNumberInput = styled.input`
   border-color: blue;
 `;
 
-export const FormSubmitBtn = styled.button`
+export const FormSubmitBtn = styled(MatButton)`
   display: block;
-  padding: 10px 15px;
   width: max-content;
-  background-color: blue;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-`
+  border-radius: 10px;
+
+  &:hover {
+    background-color: orange;
+    color: black;
+  }
+`;

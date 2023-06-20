@@ -11,6 +11,9 @@ const Filter = () => {
     <FilterLabel htmlFor="filter">
       Find contacts by name{' '}
       <FilterInput
+        label="Filter contacts"
+        variant="outlined"
+        size="small"
         id="filter"
         type="text"
         value={value}

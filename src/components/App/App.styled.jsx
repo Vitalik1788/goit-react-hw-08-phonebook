@@ -6,10 +6,10 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
-  padding: 10px 15px;  
-  outline: 2px solid black;
-  background-color: aliceblue;
-  border-radius: 5%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
 `;
 
 export const Title = styled.h1`

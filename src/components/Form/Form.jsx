@@ -46,6 +46,9 @@ const Form = () => {
     <FormContainer autoComplete="off" onSubmit={onSubmitForm}>
       <NameFormLabel htmlFor="name"> Name </NameFormLabel>
       <FormNameInput
+        label="Name"
+        variant="outlined"
+        size="small"
         id="name"
         type="text"
         name="name"
@@ -58,6 +61,9 @@ const Form = () => {
       />
       <NumberFormLabel htmlFor="number">Phone number</NumberFormLabel>
       <FormNumberInput
+        label="Number"
+        variant="outlined"
+        size="small"
         id="number"
         type="tel"
         name="number"
@@ -69,7 +75,9 @@ const Form = () => {
         onChange={e => setNumber(e.currentTarget.value)}
       />
 
-      <FormSubmitBtn type="submit">Add contact</FormSubmitBtn>
+      <FormSubmitBtn variant="contained" size="large" type="submit">
+        Add contact
+      </FormSubmitBtn>
       <ToastContainer
         position="top-right"
         autoClose={1000}
