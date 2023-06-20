@@ -33,4 +33,8 @@ export const RegisterButton = styled(LogInBtn)`
   margin: 0 auto;
   margin-top: 20px;
   border-radius: 10px;
+  &:hover {
+    background-color: orange;
+    color: black;
+  }
 `;
